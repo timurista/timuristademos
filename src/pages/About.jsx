@@ -9,7 +9,7 @@ class About extends Component {
       <div className="App">
         <div className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h2>About Page</h2>
+          <h2>About Pages</h2>
         </div>
         <p className="App-intro">
           My name is Tim Urista and I am a web developer living in Tucson, AZ.
