@@ -1,3 +1,5 @@
+import 'aframe'
+// import 'aframe-bmfont-text-component'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
@@ -9,6 +11,7 @@ import 'react-widgets/lib/less/react-widgets.less'
 // import { About, Main, TimeComponents } from './pages'
 import About from './pages/About'
 import TimeComponents from './pages/TimeComponents'
+import VRShopper from './pages/VRShopper'
 
 ReactDOM.render((
     <Router history={browserHistory}>
@@ -23,6 +26,7 @@ ReactDOM.render((
       </Route>      
       <Route path="/about" component={About}/>
       <Route path="/time" component={TimeComponents}/>
+      <Route path="/vrshopper" component={VRShopper}/>
     </Router>
   ),
   document.getElementById('root')
