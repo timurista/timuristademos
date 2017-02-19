@@ -24,6 +24,9 @@ class App extends Component {
           <li>
             <Link to="/time">Time Modules</Link>
           </li>
+          <li>
+            <Link to="/vrshopper">VR Shopper</Link>
+          </li>
         </ul>
       </div>
     )

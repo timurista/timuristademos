@@ -10,7 +10,7 @@ export default class VRShopper extends Component {
       <div className="App">
         <div className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h2>VR Demo</h2>
+          <h2>VR Shopper Demo</h2>
         </div>
         <Scene>
         <Entity 
