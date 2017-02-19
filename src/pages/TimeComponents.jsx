@@ -21,7 +21,7 @@ export default class TimeComponents extends Component {
     }
     toggle(e) {
         e.preventDefault()
-        this.setState({ militaryTime: e.target.value === 'true'})
+        this.setState({ militaryTime: e.target.value === 'military'})
     }
     renderTime() {
         const { militaryTime } =this.state
@@ -29,14 +29,20 @@ export default class TimeComponents extends Component {
         // const timeToggle = (militaryTime) ? '12 Hour Format': '24hr Military Time Format'
         return (
           <div>
-            <label>24hr Military Time
+            <label>24hr Military Time</label>
               <input onChange={this.toggle.bind(this)} 
-                type='radio' value={true} name='m'/>
-            </label>
-            <label>12hr Am/PM Time 
+                type='radio' 
+                value='military'
+                checked={(militaryTime) ? 'checked': ''}  
+                name='militaryTime'/>
+            
+            <label>12hr Am/PM Time </label>
               <input onChange={this.toggle.bind(this)} 
-                type='radio' value={false} name='t'/>
-            </label>
+                type='radio' 
+                value='standard'
+                checked={(militaryTime) ? '': 'checked'} 
+                name='standardTime'/>
+            
             {/* <button type="button" onClick={this.handleClick.bind(this)}>{timeToggle}</button> */}
         <DateTimePicker 
           calendar={false} 
