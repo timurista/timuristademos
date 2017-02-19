@@ -4,6 +4,7 @@ import App from './App'
 import './index.css'
 // import Routes from './Routes'
 import { Router, Route, browserHistory } from 'react-router'
+import 'react-widgets/lib/less/react-widgets.less'
 // and the Home component
 // import { About, Main, TimeComponents } from './pages'
 import About from './pages/About'
