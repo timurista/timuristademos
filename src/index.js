@@ -15,18 +15,18 @@ import VRShopper from './pages/VRShopper'
 
 ReactDOM.render((
     <Router history={browserHistory}>
-      <Route path="/" component={App}>
+      <Route path="/" component={App} name="Home" />       
+        <Route path="/about" component={About} name="About"/>
+        <Route path="/time" component={TimeComponents} name="Time"/>
+        <Route path="/vrshopper" component={VRShopper} name="VR Shopper"/>
 
         {/* add it here, as a child of `/` */}
         {/* <IndexRoute component={Main} /> */}
 
         {/* <Route path="/repos" component={Repos}>
           <Route path="/repos/:userName/:repoName" component={Repo}/>
-        </Route> */}
-      </Route>      
-      <Route path="/about" component={About}/>
-      <Route path="/time" component={TimeComponents}/>
-      <Route path="/vrshopper" component={VRShopper}/>
+        </Route> */}   
+      
     </Router>
   ),
   document.getElementById('root')
