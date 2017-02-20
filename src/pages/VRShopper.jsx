@@ -8,7 +8,7 @@ import {Entity, Scene} from 'aframe-react'
 export default class VRShopper extends Component {
     render() {
         return (
-      
+      <div>
         
         <Scene>
           <Entity
@@ -34,6 +34,7 @@ export default class VRShopper extends Component {
           position={[2, 2, -2]}
           onClick={() => { console.log('you clicked me'); this.object3D.rotation.x += .001} }
         />
+        <p>RenderMe</p>
         
         {/* SKY COMPONENT TODO: refactr */}
         
@@ -41,6 +42,7 @@ export default class VRShopper extends Component {
         {/* https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg */}
         {/* <Entity bmfont-text={{text: 'HELLO WORLD'}} position="{[0, 1, -5]}"/> */}
       </Scene>
+    </div>
     )
     }
 }
