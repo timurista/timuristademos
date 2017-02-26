@@ -32,23 +32,23 @@ it('registers bugg form in the store', () => {
 
 it('enters info works like expected', () => {
   // TODO: check that inputs enter values we expect
-    const name = 'TEST NAME'
+    const zip = 'TEST NAME'
     form.find(Field).first().find('input').simulate('change', {
-        target: { value: name }
+        target: { value: zip }
     })
     const expected = JSON.stringify(store.getState().form.buggyForm.values)
-    expect(expected).toBe(JSON.stringify({'firstName': name}))
+    expect(expected).toBe(JSON.stringify({'zip': zip}))
 })
 
 it('on submit will submit something', () => {
     const submitButton = wrapper.find('button[type="submit"]')
     // console.log(submitButton)
-    wrapper.find('button[type="submit"]').simulate('click' )
+    form.simulate('submit')
     const mapStateToProps = (state) => ({
         state,
     })
     // TODO: write submit here
-    console.log(JSON.stringify(store.getState()))
+    // console.log(JSON.stringify(store.getState()))
 
     expect(store.getState().form).not.toBe(null)
 })
