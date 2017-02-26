@@ -6,7 +6,15 @@ import './index.css'
 // import Routes from './Routes'
 import 'react-widgets/lib/less/react-widgets.less'
 import Routes from './Routes'
+import { Provider } from 'react-redux'
+import { createStore, combineReducers } from 'redux'
+import { reducer } from 'redux-form'
 
-ReactDOM.render(<Routes />,
+const store = createStore(combineReducers({ form: reducer }))
+
+ReactDOM.render(
+  <Provider store={ store }>
+    <Routes />
+  </Provider>,
   document.getElementById('root')
 )

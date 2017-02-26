@@ -1,21 +1,33 @@
 import React, { Component } from 'react'
+import { Field, reduxForm } from 'redux-form'
 
-
-export default class BuggyConnectedForm extends Component {
-    render() {
+class BuggyForm extends Component {
+    renderInputField(name, label) {
         return (
-      <div className="App">
-        <div className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h2>Chrome Dev Tools</h2>
+        <div>
+          <label>{label}</label>
+          <div>
+            <Field name={name} component="input" type="text" placeholder={label}/>
+          </div>
         </div>
-        <p className="App-intro">
-          Buggy App Example
-          Open chrome dev tools
-          <BuggyConnectedForm />
-        </p>
-      </div>
-    )
+      )
+    }
+    render() {
+        const { handleSubmit, pristine, reset, submitting } = this.props
+        return (
+          <form onSubmit={(e, submitted) => { e.preventDefault(); alert(JSON.stringify(submitted)); console.log(handleSubmit)} }>
+            {this.renderInputField('firstName', 'First Name')}
+            {this.renderInputField('lastName', 'Last Name')}
+            {this.renderInputField('icecream', 'Favorite Icecream')}
+            <div>
+              <button type="submit" disabled={pristine || submitting}>Submit</button>
+              <button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values</button>
+            </div>
+          </form>
+        )
     }
 }
 
+export default reduxForm({
+    form: 'buggyForm'  // a unique identifier for this form
+})(BuggyForm)

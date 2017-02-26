@@ -11,9 +11,10 @@ export default class ChromeDevTools extends Component {
         </div>
         <p className="App-intro">
           Buggy App Example
-          Open chrome dev tools
-          <BuggyConnectedForm />
+          Open chrome dev tools          
         </p>
+        <p> Buggy Form Example</p>
+        <BuggyConnectedForm />
       </div>
     )
     }
