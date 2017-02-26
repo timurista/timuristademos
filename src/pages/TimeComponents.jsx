@@ -16,16 +16,17 @@ export default class TimeComponents extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            militaryTime: false
+            militaryTime: props.militaryTime || false
         }
     }
     toggle(e) {
-        e.preventDefault()
         this.setState({ militaryTime: e.target.value === 'military'})
     }
     renderTime() {
-        const { militaryTime } =this.state
+        const { militaryTime } = this.state
+        const { defaultValue } = this.props
         const format = (militaryTime) ? 'H:mm' : 'h:mm A'
+        const defTime = Moment(defaultValue, format) || new Date()
         // const timeToggle = (militaryTime) ? '12 Hour Format': '24hr Military Time Format'
         return (
           <div>
@@ -43,11 +44,10 @@ export default class TimeComponents extends Component {
                 checked={(militaryTime) ? '': 'checked'} 
                 name='standardTime'/>
             
-            {/* <button type="button" onClick={this.handleClick.bind(this)}>{timeToggle}</button> */}
         <DateTimePicker 
           calendar={false} 
           format={format}
-          defaultValue={new Date()}
+          defaultValue={defTime}
          />
       </div>
       )
@@ -56,7 +56,6 @@ export default class TimeComponents extends Component {
         return (
       <div className="App">
         <div className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h2>Time Component</h2>
         </div>
         <p className="App-intro">

@@ -28,6 +28,9 @@ class App extends Component {
           <li>
             <Link to="/vrshopper">VR Shopper</Link>
           </li>
+          <li>
+            <Link to="/chromedevtools">Chrome Dev Tools Examples</Link>
+          </li>
         </ul>
       </div>
     )
