@@ -9,3 +9,8 @@ This site includes demos of projects including the following
 # The following resources
 - NOTE: heroku using this buildpack [https://github.com/mars/create-react-app-buildpack.git]
 - This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+```
+yarn
+npm start
+```
