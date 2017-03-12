@@ -16,7 +16,11 @@ class About extends Component {
         </p>
         <p>
           This website contains a sample of some of my work using react, redux, and other development tools.
+          Checkout my github for more info:
         </p>
+        <a href="https://github.com/timurista/">
+          github account
+        </a>
       </div>
     )
     }
