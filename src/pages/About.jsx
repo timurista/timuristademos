@@ -14,6 +14,9 @@ class About extends Component {
         <p className="App-intro">
           My name is Tim Urista and I am a web developer living in Tucson, AZ.
         </p>
+        <p>
+          This website contains a sample of some of my work using react, redux, and other development tools.
+        </p>
       </div>
     )
     }
