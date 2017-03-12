@@ -45,7 +45,7 @@ class AppHeader extends React.Component {
           onRequestChange={navOpen => this.setState({ navOpen })}
         >
           {this.menuItemMaker('', 'Home')}
-          {this.menuItemMaker('', 'About')}
+          {this.menuItemMaker('about', 'About')}
           {this.menuItemMaker('time', 'Time Modules')}
           {this.menuItemMaker('vrshopper', 'VR Shopper')}
           {this.menuItemMaker('chromedevtools', 'Chrome Dev Tools Examples')}

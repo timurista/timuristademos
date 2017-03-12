@@ -20,14 +20,10 @@ class App extends Component {
       <div className="App">
         <AppHeader />
         <div className="App-header">
-          {this.props.children}
-          {/* <h2>Demos application</h2>
+          MAIN PAGE
+          {this.props.children}          
         </div>
-        <p className="App-intro">
-          Introduction readme here
-        </p>         */}
       </div>
-    </div>
     )
     }
 }
