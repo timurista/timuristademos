@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {reduxForm} from 'redux-form';
+import {reduxForm, Field} from 'redux-form';
 
 class LoginForm extends Component {
     renderInputField(name, label) {
