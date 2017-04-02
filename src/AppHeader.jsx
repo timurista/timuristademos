@@ -55,6 +55,7 @@ class AppHeader extends React.Component {
           {this.menuItemMaker('vrshopper', 'VR Shopper')}
           {this.menuItemMaker('chromedevtools', 'Chrome Dev Tools Examples')}
           {this.menuItemMaker('documentation', 'Component Documentation')}
+          <a href="/styleguide/index.html">Style Guide</a>
         </Drawer>
       </div>
     )

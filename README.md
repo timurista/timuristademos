@@ -1,6 +1,6 @@
 # Demo of React projects hosted on Heroku
 
-demo[https://timurista-demmos.herokuapp.com/]
+[demo](https://timurista-demmos.herokuapp.com/)
 
 This site includes demos of projects including the following
 - redux form demo for learning purposes
@@ -11,6 +11,12 @@ This site includes demos of projects including the following
 - This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ```
-yarn
-npm start
+$ yarn
+$ npm start
+```
+
+For styleguide of the components used:
+```unix
+$ npm styelguide:build
+$ npm styleguide
 ```

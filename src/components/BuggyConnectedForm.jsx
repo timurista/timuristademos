@@ -9,9 +9,9 @@ export type Props = {
   id: string
 };
 
-/*
-* A Form that uses redux store and is buggy
-*/
+/**
+ * A Form that uses redux store and is buggy
+ */
 class BuggyForm extends Component {
   props : Props;
 
