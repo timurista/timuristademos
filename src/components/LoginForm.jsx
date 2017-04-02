@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {reduxForm} from 'redux-form';
 
-class BuggyForm extends Component {
+class LoginForm extends Component {
     renderInputField(name, label) {
         return (
             <div>
@@ -41,5 +41,5 @@ class BuggyForm extends Component {
 }
 
 export default reduxForm({
-    form: 'buggyForm' // a unique identifier for this form
-})(BuggyForm)
+    form: 'loginForm' // a unique identifier for this form
+})(LoginForm)
